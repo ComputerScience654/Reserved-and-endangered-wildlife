@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-right: 400px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    color: #359381;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    /* margin: 0 5px; */
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: #359381;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* animation: float 3s ease-in-out infinite; */
+}
+
+/* @keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+} */
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#animal {
+    width: 100%; 
+    height: 400px; 
+    object-fit: contain; 
+    margin: 0 auto; 
+    transform: translateY(300px)
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #003329;
+    z-index: 2;
+    /* text-align: center; */
+}
+
+.sec h2 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+.sec h3 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+.sec p {
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-indent : 3em;
+    white-space: narmal;
+    font-family: "Noto Sans Thai", sans-serif;
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    /* animation: fadeIn 2s ease-in-out; */
+}
+
+strong {
+    font-weight: 600;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+p {
+    margin-bottom: 15px;
+    /* ปรับระยะห่างของย่อหน้า */
+    line-height: 1.6;
+    /* ปรับระยะห่างระหว่างบรรทัด */
+}
+
+/* @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+/* พื้นหลังและระยะห่างของ section */
+.blog {
+    position: relative;
+    padding: 100px;
+    background: #003329;
+    z-index: 2;
+}
+
+/* กำหนด grid สำหรับแสดงรูปภาพ */
+.blog-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+}
+
+/* รูปภาพ */
+.blog-item img {
+    width: 100%; 
+    height: 300px; 
+    object-fit: contain; 
+    /* background: #004d40;  */
+    transition: transform 0.3s ease; 
+    filter: drop-shadow(0 0 0.75rem #004d40);
+}
+
+.blog-item img:hover {
+    transform: scale(1.05); 
+}
+
+/* ชื่อสัตว์ */
+.blog-item h4 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    color: #fff;
+    font-family: "Noto Sans Thai", sans-serif;
+    text-align: center;
+}
+
+/* ลิงก์ */
+.blog-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+/* ปรับขนาดตัวอักษรของหัวข้อหลัก */
+.blog-title h3 {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-family: "Noto Sans Thai", sans-serif;
+    /* text-transform: uppercase; ตัวใหญ่ทั้งหมด */
+    letter-spacing: 2px; /* ระยะห่างระหว่างตัวอักษร */
+}
+
+.blog-con a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+/* สไตล์สำหรับฟอร์ม */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #fff;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: "Noto Sans Thai", sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* สไตล์สำหรับผลลัพธ์ */
+#result {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+#result h3 {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#result p {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    .navigation a {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    #text {
+        font-size: 4em;
+    }
+
+    .sec {
+        padding: 80px;
+    }
+
+    .sec h2 {
+        font-size: 2.5em;
+    }
+
+    .sec p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    #text {
+        font-size: 3em;
+    }
+
+    .sec {
+        padding: 60px;
+    }
+
+    .sec h2 {
+        font-size: 2em;
+    }
+
+    .sec p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .navigation a {
+        font-size: 0.8em;
+        padding: 5px 10px;
+    }
+
+    #text {
+        font-size: 2.5em;
+    }
+
+    .sec {
+        padding: 40px;
+    }
+
+    .sec h2 {
+        font-size: 1.8em;
+    }
+
+    .sec p {
+        font-size: 0.8em;
+    }
+}
